@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dummy-nodejs
-          image: 230600/dummy-nodejs:v1
+          image: 230600/dummy-nodejs:v2
           ports:
             - containerPort: 3000
           env:
