@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-nodejs
+  namespace: dummy
+  labels:
+    app: dummy-nodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy-nodejs
+  template:
+    metadata:
+      labels:
+        app: dummy-nodejs
+    spec:
+      containers:
+        - name: dummy-nodejs
+          image: 230600/dummy-nodejs:v1
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: "production" 
