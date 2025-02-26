@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dummy-nodejs
 spec:
-  replicas: 0
+  replicas: 4
   selector:
     matchLabels:
       app: dummy-nodejs
